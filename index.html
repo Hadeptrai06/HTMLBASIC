@@ -9,10 +9,11 @@
                 font-family: sans-serif;
                 position: relative;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: flex-start;
                 gap: 2.5%;
                 margin: 2.5%;
+                font-size: 1rem;
             }
             a:link, a:visited, a:hover, a:active {
                 color:rgb(0, 91, 171);
@@ -23,27 +24,58 @@
                 border-collapse: collapse;
                 border-style: groove;
             }
-            .img-and-list-container {
+            .left-container {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                width: 33%;
                 margin-bottom: 20px;
+                flex-shrink: 0;
             }
-            .right-table {
+            .center-container {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-end;
+                align-items: flex-start;
+                width: 33%;
+                margin-bottom: 20px;
+                flex-shrink: 0;
+                tr:hover {
+                    background-color: aliceblue;
+                }
             }
-            tr:hover {
-                background-color: aliceblue;
+            .right-container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 33%;
+                margin-bottom: 20px;
+                flex-shrink: 0;
+                blockquote {
+                    background-color: lightsteelblue;
+                    border-left: 5px solid rgb(0, 91, 171);
+                    padding: 15px;
+                    margin: 0;
+                    font-style: italic;
+                    line-height: 1.6;
+                    text-align: justify;
+                }
+                blockquote::after {
+                    content: " -thebeatles.com-";
+                    display: block;
+                    text-align: right;
+                    font-style: normal;
+                    font-weight: bold;
+                    margin-top: 10px;
+                    font-size: 0.9em;
+                }
             }
         </style>
     </head>
     <body>
-        <div class="img-and-list-container">
+        <div class="left-container">
             <h1 title="Listen on spotify"><a href="https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN" target="_blank">Abbey Road (1969)</a></h1>
-            <img title="Album Cover" src="./images/AbbeyRoadcover.jpg" width="300" height="300" alt="The Beatles walking in single file across a zebra crossing on Abbey Road, each member dressed differently, with a tree-lined street and parked cars in the background. The scene feels calm and iconic. No visible text in the image.">
-            <hr>
+            <img style="display: block;" title="Album Cover" src="./images/AbbeyRoadcover.jpg" width="300" height="300" alt="The Beatles walking in single file across a zebra crossing on Abbey Road, each member dressed differently, with a tree-lined street and parked cars in the background. The scene feels calm and iconic. No visible text in the image.">
+            <hr style=" width: 100%; margin-top: 10px;">
             <ol> 
                 <li style="color:rgb(14, 191, 250)">Come Together</li>
                 <li style="color: rgb(27, 208, 124);">Something</li>
@@ -64,105 +96,105 @@
                 <li>Her Majesty (Hidden Track)</li>
             </ol>
         </div> 
-
-        <div class="right-table">
-            <dl>
-                <dt style="text-align: right;">First issued on 26th September, 1969 Abbey Road was the final Beatles album to be recorded but not their last to be released. Let It Be, though mainly recorded in January, 1969 was finally released in May, 1970 alongside the film of the same name.</dt>
-                <dd style="text-align: right;"><a href="https://www.thebeatles.com/abbey-road">-thebeatles.com-</a></dd>
-            </dl>
-                <table style="border-color: black; background-color: rgb(218, 216, 216);">
-                    <caption style="background-color: rgb(176, 185, 185);"><strong style="font-size: 25px;">Reception</strong></caption>
-                    <tbody>
-                        <tr>
-                            <th scope="col">Source</th> 
-                            <th scope="col">Rating</th>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/AllMusic">AllMusic</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href="https://en.wikipedia.org/wiki/The_A.V._Club">The A.V. Club</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                A
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Consequence_of_Sound">Consequence of Sound</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;"> 
-                                A+
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/The_Daily_Telegraph">The Daily Telegraph</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Encyclopedia_of_Popular_Music">Encyclopedia of Popular Music</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/MusicHound">MusicHound Rock</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Paste_(magazine)">Paste</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                100/100
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Pitchfork_(website)">Pitchfork</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                10/10
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/The_Rolling_Stone_Album_Guide">The Rolling Stone Album Guide</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Q_Magazine">Q Magazine</a></i></td>
-                            <td style="text-align: center; vertical-align: middle;">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Star_empty.svg/40px-Star_empty.svg.png" width="15px">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="right-container">
+            <table style="background-color: rgb(218, 216, 216);">
+                <caption style="background-color: rgb(176, 185, 185);"><strong style="font-size: 25px;">Reception</strong></caption>
+                <tbody>
+                    <tr>
+                        <th scope="col">Source</th> 
+                        <th scope="col">Rating</th>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/AllMusic">AllMusic</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href="https://en.wikipedia.org/wiki/The_A.V._Club">The A.V. Club</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            A
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Consequence_of_Sound">Consequence of Sound</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;"> 
+                            A+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/The_Daily_Telegraph">The Daily Telegraph</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Encyclopedia_of_Popular_Music">Encyclopedia of Popular Music</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/MusicHound">MusicHound Rock</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Paste_(magazine)">Paste</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            100/100
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Pitchfork_(website)">Pitchfork</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            10/10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/The_Rolling_Stone_Album_Guide">The Rolling Stone Album Guide</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center; vertical-align: middle;"><i><a href = "https://en.wikipedia.org/wiki/Q_Magazine">Q Magazine</a></i></td>
+                        <td style="text-align: center; vertical-align: middle;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Star_full.svg/40px-Star_full.svg.png" width="15px">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Star_empty.svg/40px-Star_empty.svg.png" width="15px">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="right-container" style="text-align: right;">
+            <blockquote cite="https://www.thebeatles.com/abbey-road">
+                First issued on 26th September, 1969 Abbey Road was the final Beatles album to be recorded but not their last to be released. Let It Be, though mainly recorded in January, 1969 was finally released in May, 1970 alongside the film of the same name.    
+            </blockquote>
         </div>
     </body>
 </html>

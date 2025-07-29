@@ -10,7 +10,6 @@
                 position: relative;
                 display: flex;
                 flex-direction: column;
-                justify-content: baseline;
                 align-items: center;
                 gap: 2.5%;
                 margin: 2.5%;
@@ -23,18 +22,18 @@
             .main-row-container {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
+                justify-content: space-around;
                 width: 100%;
                 flex-shrink: 1;
             }
             .left-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: first baseline;
                 width: 33%;
                 gap: 20px;
                 flex-basis: auto;
-                flex-shrink: 1;
+                flex-shrink: 0;
+                align-items: flex-start;
                 blockquote {
                     background-color: lightsteelblue;
                     border-left: 5px solid rgb(0, 91, 171);
@@ -43,6 +42,7 @@
                     font-style: italic;
                     line-height: 1.6;
                     text-align: justify;
+                    max-width: 100%;
                 }
                 blockquote::after {
                     content: "-thebeatles.com-";
@@ -57,20 +57,18 @@
             .center-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: first baseline;
-                align-items: flex-start;
                 width: 33%;
                 margin-bottom: 20px;
                 flex-shrink: 0;
+                align-items: center;
             }
             .right-container {
                 display: flex;
                 flex-direction: column;
-                justify-content: first baseline;
-                align-items: flex-start;
                 width: 33%;
                 margin-bottom: 20px;
                 flex-shrink: 0;
+                align-items: flex-end;
                 table, td, th, caption {
                     border: 1px solid black;
                     border-collapse: collapse;
@@ -80,15 +78,28 @@
                     background-color: aliceblue;
                 }
             }
+            @media (max-width: 1150px) {
+                .main-row-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .right-container, .center-container, .left-container {
+                    width: 90%;
+                    max-width: 600px;
+                }
+                .right-container table {
+                    align-self: center;
+                }
+            }
         </style>
     </head>
     <body>
         <h1 title="Listen on spotify"><a href="https://open.spotify.com/album/0ETFjACtuP2ADo6LFhL6HN" target="_blank">Abbey Road (1969)</a></h1>
         <hr style=" width: 100%;">
         <div class="main-row-container">
-            <div class="left-container">
+            <div class="left-container" style="max-width: min-content;">
                 <img style="display: block;" title="Album Cover" src="./images/AbbeyRoadcover.jpg" width="300" height="300" alt="The Beatles walking in single file across a zebra crossing on Abbey Road, each member dressed differently, with a tree-lined street and parked cars in the background. The scene feels calm and iconic. No visible text in the image.">
-                <blockquote style="margin-right: 35%;" cite="https://www.thebeatles.com/abbey-road">
+                <blockquote style="";" cite="https://www.thebeatles.com/abbey-road">
                     First issued on 26th September, 1969 Abbey Road was the final Beatles album to be recorded but not their last to be released. Let It Be, though mainly recorded in January, 1969 was finally released in May, 1970 alongside the film of the same name.    
                 </blockquote>
             </div>
@@ -113,7 +124,7 @@
                     <li>Her Majesty (Hidden Track)</li>
                 </ol>
             </div> 
-            <div class="right-container" style="align-items: end;">
+            <div class="right-container">
                 <table style="background-color: rgb(218, 216, 216);">
                     <caption style="background-color: rgb(176, 185, 185);"><strong style="font-size: 25px;">Reception</strong></caption>
                     <tbody>
